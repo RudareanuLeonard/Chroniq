@@ -8,15 +8,16 @@ class StartScreen(Screen):
 
     def create_screen(self):
         root = tk.Tk()
+        root.geometry("800x800")
+        root.configure(background="#188FBE")
 
         frame_style = ttk.Style()
         frame_style.configure("Frame.TFrame", background='#188FBE')
 
-        frame = ttk.Frame(root, padding=150, style="Frame.TFrame")
-        frame.grid()
+        frame = ttk.Frame(root, style="Frame.TFrame")
+        frame.pack(fill="both", expand=True)
 
-        ttk.Label(frame, text = self.app_name, padding=20).grid(column=0,row=1)
+        ttk.Label(frame, text=self.app_name, padding=20).pack(pady=20)
+        ttk.Button(frame, text="TEST").pack()
 
-        ttk.Button(frame, text="TEST").grid(column=0,row=2)
-        root.configure(background='#000000')
         root.mainloop()
