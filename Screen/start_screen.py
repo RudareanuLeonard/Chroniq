@@ -8,7 +8,7 @@ class StartScreen(Screen):
 
     def create_screen(self):
         root = tk.Tk()
-        root.geometry("800x800")
+        root.geometry(f"{self.width}x{self.height}")
         root.configure(background="#188FBE")
 
         frame_style = ttk.Style()
